@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Monster Cursor</title>
+    <meta name="description" content="Privacy policy for the Monster Cursor browser extension.">
+    <style>
+        :root {
+            --bg: #f4f5fb;
+            --surface: #ffffff;
+            --text: #1f2430;
+            --text-secondary: #5b6272;
+            --primary: #7c3aed;
+            --primary-dark: #5b21b6;
+            --primary-light: #ede9fe;
+            --accent: #f97316;
+            --border: #e5e7eb;
+            --radius: 16px;
+            --shadow: 0 10px 40px rgba(76, 29, 149, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            background-image:
+                radial-gradient(circle at 15% 10%, rgba(124, 58, 237, 0.08) 0, transparent 40%),
+                radial-gradient(circle at 85% 90%, rgba(249, 115, 22, 0.07) 0, transparent 40%);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        /* Header / Hero */
+        .hero {
+            text-align: center;
+            padding: 64px 0 40px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+            margin-bottom: 20px;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(120deg, var(--primary-dark), var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        /* Card */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 48px 56px;
+        }
+
+        .effective {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border-radius: 12px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 36px;
+        }
+
+        .effective svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        section {
+            margin-bottom: 34px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h2 .index {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 20px 0 8px;
+        }
+
+        section p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        section p strong {
+            color: var(--text);
+        }
+
+        section ul, section ol {
+            margin: 8px 0 12px;
+            padding-left: 24px;
+        }
+
+        section li {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        section li::marker {
+            color: var(--primary);
+        }
+
+        .highlight {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+            color: var(--text);
+        }
+
+        .highlight p {
+            color: var(--text);
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer .divider {
+            width: 64px;
+            height: 3px;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            margin: 0 auto 20px;
+        }
+
+        .footer strong {
+            color: var(--text);
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 28px; }
+            .card { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero -->
+        <header class="hero">
+            <div class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 12l4 3 3-7 3 9 3-5 5 3"/>
+                    <path d="M5 5l2 3M19 5l-2 3"/>
+                    <circle cx="8" cy="17" r="1"/>
+                    <circle cx="16" cy="17" r="1"/>
+                </svg>
+            </div>
+            <h1>Privacy Policy of Monster Cursor</h1>
+            <p class="subtitle">Your privacy matters. Here is everything you need to know about how Monster Cursor handles your data.</p>
+            <span class="badge">Effective Date: August 2026</span>
+        </header>
+
+        <!-- Main Card -->
+        <main class="card">
+            <div class="effective">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Last Updated: August 2026 &nbsp;·&nbsp; Effective Date: August 2026</span>
+            </div>
+
+            <section>
+                <h2><span class="index">1</span>Introduction</h2>
+                <p>Monster Cursor ("we," "our," or "this extension") takes your privacy seriously. This privacy policy explains how we collect, use, store, and protect information when you use this browser extension.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">2</span>Data Collection</h2>
+                <h3>Data We Collect</h3>
+                <p>This extension <strong>does not collect, store, or transmit any personally identifiable information</strong>. We only collect the following types of non-personal data, and all data is stored locally on your device:</p>
+                <ol>
+                    <li><strong>User Preferences</strong>: Your selected monster cursor style, animation speed, and effect toggle settings</li>
+                    <li><strong>Enable State</strong>: The extension's enabled/disabled status, to remember your usage habits</li>
+                </ol>
+                <h3>How We Collect Data</h3>
+                <p>All data is stored locally on your device through the browser's local storage API (chrome.storage.local / localStorage). We <strong>do not</strong>:</p>
+                <ul>
+                    <li>Collect your browsing history</li>
+                    <li>Collect your personally identifiable information</li>
+                    <li>Transmit data to any server</li>
+                    <li>Share any data with third parties</li>
+                    <li>Use any analytics or tracking services</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="index">3</span>Data Usage</h2>
+                <p>We only use the collected data to:</p>
+                <ul>
+                    <li>Provide and improve extension functionality</li>
+                    <li>Remember your preferences</li>
+                    <li>Display your chosen monster cursor style on web pages</li>
+                </ul>
+                <div class="highlight">
+                    <p>All data processing is done locally on your device and is never uploaded to any server.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="index">4</span>Data Storage</h2>
+                <p>All data is stored locally on your device using the browser's local storage API. You can delete this data at any time through your browser's extension management page.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">5</span>Data Sharing</h2>
+                <p>We <strong>do not</strong> share, sell, or transmit your data to any third parties. All data remains entirely on your device.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">6</span>Permission Usage</h2>
+                <h3>storage Permission</h3>
+                <p>Used to store your cursor style preferences and feature toggle states locally on your device. Data is never uploaded to any server.</p>
+                <h3>Host Permissions (&lt;all_urls&gt;)</h3>
+                <p>Used to inject content scripts on all web pages to apply your selected monster cursor style. All processing is done locally and no data is collected or uploaded.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">7</span>Third-Party Services</h2>
+                <p>This extension does not integrate any third-party analytics services, advertising services, or data collection services.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">8</span>Data Security</h2>
+                <p>Since all data is stored locally on your device, data security depends on your device security. We recommend that you:</p>
+                <ul>
+                    <li>Keep your browser and operating system updated</li>
+                    <li>Use strong passwords to protect your device</li>
+                    <li>Do not share your device with others</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="index">9</span>Your Rights</h2>
+                <p>You have complete control over your data:</p>
+                <ul>
+                    <li>You can delete the extension and all its data at any time through your browser's extension management page</li>
+                    <li>You can clear your browser's local storage data</li>
+                    <li>You can uninstall the extension at any time</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="index">10</span>Children's Privacy</h2>
+                <p>This extension is not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">11</span>Privacy Policy Changes</h2>
+                <p>We may update this privacy policy from time to time. Any significant changes will be notified through extension updates. We recommend that you review this privacy policy periodically to stay informed.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">12</span>Contact Us</h2>
+                <p>If you have any questions or concerns about this privacy policy, please contact us through:</p>
+                <ul>
+                    <li>Email: <strong>yugakhans@gmail.com</strong></li>
+                    <li>Project Repository: Visit the extension's GitHub repository to submit issues</li>
+                    <li>Extension Description: Check the extension store page for more information</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="index">13</span>Consent</h2>
+                <p>By installing and using this extension, you agree to the terms of this privacy policy. If you do not agree with this privacy policy, please do not use this extension.</p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="divider"></div>
+            <p>© 2026 Monster Cursor. All rights reserved.</p>
+            <p><strong>Last Updated: August 2026</strong></p>
+        </footer>
+    </div>
+</body>
+</html>
