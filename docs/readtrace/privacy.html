@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ReadTrace</title>
+    <meta name="description" content="Privacy policy for the ReadTrace immersive reader browser extension.">
+    <style>
+        :root {
+            --bg: #f6f1e8;
+            --surface: #fffdf8;
+            --text: #1c241c;
+            --text-secondary: #5c6558;
+            --primary: #2f6b4f;
+            --primary-dark: #1f4a36;
+            --primary-light: #e7f2ea;
+            --accent: #c47a2c;
+            --border: #e4ddd0;
+            --radius: 16px;
+            --shadow: 0 10px 40px rgba(31, 74, 54, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            background-image:
+                radial-gradient(circle at 12% 8%, rgba(47, 107, 79, 0.08) 0, transparent 42%),
+                radial-gradient(circle at 88% 92%, rgba(196, 122, 44, 0.08) 0, transparent 40%);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 64px 0 40px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            box-shadow: 0 8px 24px rgba(47, 107, 79, 0.35);
+            margin-bottom: 20px;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(120deg, var(--primary-dark), var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 48px 56px;
+        }
+
+        .effective {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border-radius: 12px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 36px;
+        }
+
+        .effective svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        section {
+            margin-bottom: 34px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h2 .index {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 20px 0 8px;
+        }
+
+        section p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        section p strong {
+            color: var(--text);
+        }
+
+        section ul, section ol {
+            margin: 8px 0 12px;
+            padding-left: 24px;
+        }
+
+        section li {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        section li::marker {
+            color: var(--primary);
+        }
+
+        .highlight {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+            color: var(--text);
+        }
+
+        .highlight p {
+            color: var(--text);
+            margin: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer .divider {
+            width: 64px;
+            height: 3px;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            margin: 0 auto 20px;
+        }
+
+        .footer strong {
+            color: var(--text);
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 28px; }
+            .card { padding: 32px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    <path d="M8 7h8M8 11h6"/>
+                </svg>
+            </div>
+            <h1>Privacy Policy of ReadTrace</h1>
+            <p class="subtitle">Your privacy matters. Here is everything you need to know about how ReadTrace handles your data.</p>
+            <span class="badge">Effective Date: August 2026</span>
+        </header>
+
+        <main class="card">
+            <div class="effective">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Last Updated: August 2026 &nbsp;·&nbsp; Effective Date: August 2026</span>
+            </div>
+
+            <section>
+                <h2><span class="index">1</span>Introduction</h2>
+                <p>ReadTrace ("we," "our," or "this extension") takes your privacy seriously. This privacy policy explains how we collect, use, store, and protect information when you use this browser extension.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">2</span>Data Collection</h2>
+                <h3>Data We Collect</h3>
+                <p>This extension <strong>does not collect, store, or transmit any personally identifiable information</strong> for reading itself. Article content is processed locally in your browser and is never uploaded. We only store the following types of data on your device:</p>
+                <ol>
+                    <li><strong>User Preferences</strong>: Reading theme, font family, font size, line height, letter spacing, column width, focus mode, image/progress/estimate toggles, text justification, auto-detect, speech rate, and related reader settings</li>
+                    <li><strong>Enable State</strong>: The extension's enabled/disabled status, to remember your usage habits</li>
+                    <li><strong>Site Ignore List</strong>: Hostnames you choose to exclude from auto-open, stored as domain names only</li>
+                    <li><strong>Scroll Memory</strong>: Optional last-read scroll positions for pages you open in the reader, stored locally</li>
+                    <li><strong>Interface Language</strong>: Your selected interface language (Chinese, English, Japanese)</li>
+                    <li><strong>Payment Cache</strong>: Local Pro membership status used to unlock paid features. If you purchase Pro, a payment email provided by the payment provider may also be cached locally</li>
+                </ol>
+                <h3>How We Collect Data</h3>
+                <p>Reading preferences and related state are stored locally on your device through the browser's local storage API (chrome.storage.local). We <strong>do not</strong>:</p>
+                <ul>
+                    <li>Collect your browsing history</li>
+                    <li>Upload article content, Markdown exports, or screenshots</li>
+                    <li>Transmit reading data to any server we operate</li>
+                    <li>Share any data with third parties, except as needed to process Pro payments</li>
+                    <li>Use any analytics or tracking services</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="index">3</span>Data Usage</h2>
+                <p>We only use the collected data to:</p>
+                <ul>
+                    <li>Provide and improve extension functionality</li>
+                    <li>Remember your reading preferences</li>
+                    <li>Extract article content and display it in the immersive reader on the current page</li>
+                    <li>Honor your site ignore list and restore scroll position when you ask us to</li>
+                    <li>Verify Pro membership so paid features can be unlocked</li>
+                </ul>
+                <div class="highlight">
+                    <p>Article extraction, typography, focus modes, search, Markdown export, print, and read-aloud all run locally in your browser. Page content is never uploaded to any server.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="index">4</span>Data Storage</h2>
+                <p>All reading preferences, ignore-list hostnames, scroll memory, and payment cache are stored locally on your device using the browser's local storage API. You can delete this data at any time through your browser's extension management page.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">5</span>Data Sharing</h2>
+                <p>We <strong>do not</strong> share, sell, or transmit your reading data to any third parties. Page content remains entirely on your device. The only exception is Pro payment verification, described below.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">6</span>Permission Usage</h2>
+                <h3>storage Permission</h3>
+                <p>Used to store your reader preferences, ignore list, scroll memory, and Pro membership cache locally on your device. Reading content is never uploaded to any server.</p>
+                <h3>tabs Permission</h3>
+                <p>Used to open the immersive reader on the tab you choose (toolbar, shortcut, or context menu) and to notify open tabs after a successful Pro purchase. We do not collect tab URLs or browsing history.</p>
+                <h3>scripting Permission</h3>
+                <p>Used to inject the reader on the current page when you open it, including on tabs that were already open before install. Scripts run only to extract and display the article locally.</p>
+                <h3>contextMenus Permission</h3>
+                <p>Used to add an "Open immersive reader" item to the page and selection context menus so you can start reading from a right-click.</p>
+                <h3>Host Permissions (http://*/* and https://*/*)</h3>
+                <p>Used to run a content script on web pages so the reader can extract article content, apply your theme, and optionally auto-detect article-like pages. All processing is done locally and article content is not uploaded.</p>
+                <h3>Host Permission (extensionpay.com)</h3>
+                <p>Used only when you choose to purchase or restore Pro membership, so the payment flow can complete and membership status can be verified.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">7</span>Third-Party Services</h2>
+                <p>This extension does not integrate any third-party analytics services, advertising services, or data collection services for reading.</p>
+                <p>Pro membership is processed by <strong>ExtensionPay</strong> (extensionpay.com). If you purchase Pro, ExtensionPay may process your payment details and provide a paid status (and optionally an email) so the extension can unlock paid features. That membership cache is stored locally. Article content is never sent to ExtensionPay or to any other third party.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">8</span>Data Security</h2>
+                <p>Since reading data is stored locally on your device, data security depends on your device security. We recommend that you:</p>
+                <ul>
+                    <li>Keep your browser and operating system updated</li>
+                    <li>Use strong passwords to protect your device</li>
+                    <li>Do not share your device with others</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="index">9</span>Your Rights</h2>
+                <p>You have complete control over your data:</p>
+                <ul>
+                    <li>You can delete the extension and all its data at any time through your browser's extension management page</li>
+                    <li>You can clear your browser's local storage data</li>
+                    <li>You can uninstall the extension at any time</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="index">10</span>Children's Privacy</h2>
+                <p>This extension is not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">11</span>Privacy Policy Changes</h2>
+                <p>We may update this privacy policy from time to time. Any significant changes will be notified through extension updates. We recommend that you review this privacy policy periodically to stay informed.</p>
+            </section>
+
+            <section>
+                <h2><span class="index">12</span>Contact Us</h2>
+                <p>If you have any questions or concerns about this privacy policy, please contact us through:</p>
+                <ul>
+                    <li>Email: <strong>yugakhans@gmail.com</strong></li>
+                    <li>Project Repository: Visit the extension's GitHub repository to submit issues</li>
+                    <li>Extension Description: Check the extension store page for more information</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="index">13</span>Consent</h2>
+                <p>By installing and using this extension, you agree to the terms of this privacy policy. If you do not agree with this privacy policy, please do not use this extension.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="divider"></div>
+            <p>© 2026 ReadTrace. All rights reserved.</p>
+            <p><strong>Last Updated: August 2026</strong></p>
+        </footer>
+    </div>
+</body>
+</html>
